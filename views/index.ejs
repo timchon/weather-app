@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода від Артема</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <% if(weatherMessage === "Ясне небо" ){ %>
+        <% if(hourNow >= sunriseHour && hourNow < sunsetHour){ %>
+            <section class="weatherBox one">
+        <% }else { %>
+            <section class="weatherBox oneNight">
+            <% } %>
+        <div class="resetPage"><a href="#" onclick="location.reload()"><img src="/images/rotate.png" alt=""></a></div>
+        <div class="container">
+            <div class="weatherTitle"><p><span><%= temperature %>&deg;</span> м.Кривий Ріг</p></div>
+            <p class="cloudy"><img src="/images/cloudy.png" alt="Іконко погоди"> <%= weatherMessage %></p>
+            <p class="temperatureApparent"><img src="/images/temperature.png" alt="Іконка темератури яка відчувається"> Відчувається на <%= apparent %>&deg;С</p>
+        </div>
+    </section>
+    <% }else if(weatherMessage === "Часткове хмарне небо"){ %>
+        <% if(hourNow >= sunriseHour && hourNow < sunsetHour){ %>
+            <section class="weatherBox two">
+        <% }else{ %>
+            <section class="weatherBox twoNight">
+            <% } %>
+        <div class="container">
+            <div class="weatherTitle"><p><span><%= temperature %>&deg;</span> м.Кривий Ріг</p></div>
+            <p class="cloudy"><img src="/images/cloudy.png" alt="Іконко погоди"> <%= weatherMessage %></p>
+            <p class="temperatureApparent"><img src="/images/temperature.png" alt="Іконка темератури яка відчувається"> Відчувається на <%= apparent %>&deg;С</p>
+        </div>
+    </section>
+    <% }else if(weatherMessage === "Хмарно"){ %>
+        <% if(hourNow >= sunriseHour && hourNow < sunsetHour){ %>
+            <section class="weatherBox three">
+        <% }else{ %>
+            <section class="weatherBox threeNight">
+            <% } %>
+        <div class="container">
+            <div class="weatherTitle"><p><span><%= temperature %>&deg;</span> м.Кривий Ріг</p></div>
+            <p class="cloudy"><img src="/images/cloudy.png" alt="Іконко погоди"> <%= weatherMessage %></p>
+            <p class="temperatureApparent"><img src="/images/temperature.png" alt="Іконка темератури яка відчувається"> Відчувається на <%= apparent %>&deg;С</p>
+        </div>
+    </section>
+    <% } else if(weatherMessage === "Дощ"){ %>
+        <% if(hourNow >= sunriseHour && hourNow < sunsetHour){ %>
+            <section class="weatherBox four">
+        <% }else{ %>
+            <section class="weatherBox fourNight">
+            <% } %>
+        <div class="container">
+            <div class="weatherTitle"><p><span><%= temperature %>&deg;</span> м.Кривий Ріг</p></div>
+            <p class="cloudy"><img src="/images/cloudy.png" alt="Іконко погоди"> <%= weatherMessage %></p>
+            <p class="temperatureApparent"><img src="/images/temperature.png" alt="Іконка темератури яка відчувається"> Відчувається на <%= apparent %>&deg;С</p>
+        </div>
+    </section>
+    <% }else if(weatherMessage === "Сніг"){ %>
+        <% if(hourNow >= sunriseHour && hourNow < sunsetHour){ %>
+            <section class="weatherBox five">
+        <% }else{ %>
+            <section class="weatherBox fiveNight">
+            <% } %>
+        <div class="container">
+            <div class="weatherTitle"><p><span><%= temperature %>&deg;</span> м.Кривий Ріг</p></div>
+            <p class="cloudy"><img src="/images/cloudy.png" alt="Іконко погоди"> <%= weatherMessage %></p>
+            <p class="temperatureApparent"><img src="/images/temperature.png" alt="Іконка темератури яка відчувається"> Відчувається на <%= apparent %>&deg;С</p>
+        </div>
+    </section>
+    <% } else{%>
+        <% if(hourNow >= sunriseHour && hourNow < sunsetHour){ %>
+            <section class="weatherBox six">
+        <% }else{ %>
+            <section class="weatherBox sixNight">
+            <% } %>
+        <div class="container">
+            <div class="weatherTitle"><p><span><%= temperature %>&deg;</span> м.Кривий Ріг</p></div>
+            <p class="cloudy"><img src="/images/cloudy.png" alt="Іконко погоди"> <%= weatherMessage %></p>
+            <p class="temperatureApparent"><img src="/images/temperature.png" alt="Іконка темератури яка відчувається"> Відчувається на <%= apparent %>&deg;С</p>
+        </div>
+    </section>
+        <% } %>
+</body>
+</html>

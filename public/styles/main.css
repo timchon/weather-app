@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+}
+body{
+    font-family: "Noto Sans", sans-serif;
+}
+
+.weatherBox{
+    max-width: 320px;
+    height: 300px;
+    border-radius: 25px;
+    position: relative;
+    margin: 5px;
+}
+.container{
+    height: 93%;
+    padding: 10px;
+    background-color: #56565673;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.one{
+    background-image: url("/images/clearSky.jpg");
+    background-size: cover;
+    color: white;
+}
+.two{
+    background-image: url("/images/twoSky.jpg");
+    background-size: cover;
+    color: white;
+}
+
+.three{
+    background-image: url("/images/cloudy.jpg");
+    background-size: cover;
+    color: white;
+}
+.four{
+    background-image: url("/images/rain.jpg");
+    background-size: cover;
+    color: white;
+}
+.five{
+    background-image: url("/images/snow.jpg");
+    background-size: cover;
+    color: #292929;
+}
+.six{
+    background-image: url("/images/fog.jpg");
+    background-size: cover;
+    color: #ffffff;
+}
+.oneNight{
+    background-image: url("/images/clearSkyNight.jpg");
+    background-size: cover;
+    color: #ffffff;
+}
+.twoNight{
+    background-image: url("/images/twoNight.jpg");
+    background-size: cover;
+}
+.threeNight{
+    background-image: url("/images/cloudy.png");
+    background-size: cover;
+}
+.fourNight{
+    background-image: url("/images/rain.jpg");
+    background-size: cover;
+}
+.fiveNight{
+    background-image: url("/images/snowNight.jpg");
+    background-size: cover;
+}
+.sixNight{
+    background-image: url("/images/fogNight.jpg");
+    background-size: cover;
+}
+.weatherTitle span{
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.weatherTitle p{
+    font-size: 16px;
+}
+
+.resetPage{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.resetPage>a>img{
+    width: 32px;
+    transition: transform 0.5s ease;
+}
+
+.resetPage>a>img:hover{
+    transform: rotate(360deg);
+}
